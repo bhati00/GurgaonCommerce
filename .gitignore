@@ -11231,3 +11231,10 @@ backend/venv/lib/python3.10/site-packages/django_templated_mail-1.1.1.dist-info/
 backend/venv/lib/python3.10/site-packages/six-1.16.0.dist-info/REQUESTED
 backend/venv/lib/python3.10/site-packages/social_auth_app_django-5.4.1.dist-info/REQUESTED
 backend/venv/lib/python3.10/site-packages/social_auth_core-4.5.4.dist-info/REQUESTED
+backend/API/users/__pycache__/managers.cpython-310.pyc
+backend/API/users/migrations/__pycache__/__init__.cpython-310.pyc
+backend/API/users/migrations/__pycache__/0001_initial.cpython-310.pyc
+backend/API/users/migrations/__pycache__/0002_userprofile.cpython-310.pyc
+backend/API/users/v1/__pycache__/__init__.cpython-310.pyc
+backend/API/users/v1/__pycache__/serializers.cpython-310.pyc
+backend/API/users/v1/__pycache__/urls.cpython-310.pyc
