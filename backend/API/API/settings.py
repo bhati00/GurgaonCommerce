@@ -45,11 +45,14 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'drf_spectacular',
+    'corsheaders',
     'djoser',
     'users'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -183,3 +186,8 @@ DJOSER = {
         'current_user': 'users.v1.serializers.CustomUserUpdateSerializer',
     }
 }
+
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173'
+]
