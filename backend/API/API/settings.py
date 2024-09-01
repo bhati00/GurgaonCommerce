@@ -148,6 +148,9 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.AllowAny",
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     
 }
@@ -171,8 +174,8 @@ SPECTACULAR_SETTINGS = {
 # jwt settings 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=6),
-     "SIGNING_KEY": os.getenv("SECRET_KEY"),
-      'AUTH_HEADER_TYPES': ('Bearer')
+    "SIGNING_KEY": os.getenv("SECRET_KEY"),
+    'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
 # django auth model

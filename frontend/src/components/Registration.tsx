@@ -1,5 +1,5 @@
-import { useForm, SubmitHandler, useFormState } from "react-hook-form";
-import { addUser } from "../api/users";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { login } from "../api/users";
 import { toast } from "react-toastify";
 
 interface SignUpFormData {
@@ -10,11 +10,10 @@ const Registration = () => {
 
     // using react hooks form
     const {register, handleSubmit, formState: { errors, isSubmitting } } = useForm<SignUpFormData>();
-    console.log(isSubmitting)
 
     const onSubmit: SubmitHandler<SignUpFormData> = async (data) => {
         try {
-            const response = await addUser(data);
+            const response = await login(data);
             if (response) {
                 toast.success('User added successfully!');
             }
